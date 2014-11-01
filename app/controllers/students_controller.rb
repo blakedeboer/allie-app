@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
 
   def show
-    render text: "hello world!"
+    render text: "Hi Reesie!"
   end
 
 
