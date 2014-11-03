@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102124014) do
+ActiveRecord::Schema.define(version: 20141102203734) do
 
   create_table "students", force: true do |t|
-    t.string "name"
-    t.string "image"
+    t.string  "name"
+    t.string  "image"
+    t.boolean "named"
   end
 
 end

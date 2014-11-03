@@ -1,0 +1,21 @@
+<h1>Hey Allie, ALL DONE!</h1>
+
+<p>Nice job. Click the button if you would like to reset and play again. </p>
+
+<%= button_to "Reset", "/", :method => "post" %>
+
+<p>...and just in case you already forgot, here's the whole gang...</p>
+
+<% @students.each do |student|%>
+
+<img src="http://ruby006.students.flatironschool.com/<%= student.image %>">
+
+<p>
+ My name is <%= student.name %>  
+</p>
+
+<% end %>
+
+
+
+

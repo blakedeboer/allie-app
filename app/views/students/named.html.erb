@@ -1,0 +1,22 @@
+<h1>Hey Allie, welcome to all your friends that you named.</h1>
+
+<p><%= button_to "Let's get back to the action", "/", :method => "get" %><br>
+<%= button_to "Who haven't I named?", "/unnamed", :method => "get" %>
+</p>
+
+<br>
+<br>
+
+<% @students.each do |student|%>
+
+<img width="380" height "380" src="http://ruby006.students.flatironschool.com/<%= student.image %>">
+
+<p>
+ My name is <%= student.name %>  
+</p>
+<br>
+<br>
+<br>
+
+<% end %>
+

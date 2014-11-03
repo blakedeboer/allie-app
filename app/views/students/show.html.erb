@@ -1,8 +1,31 @@
-<h1>Hey Allie, What's My Name?</h1>
+<head>
+  <%= stylesheet_link_tag "application" %>
+</head>
 
-
+<h1>Hey Allie, what's my name?</h1>
 
 <body>
+ 
+<img width="380" height "380" src="http://ruby006.students.flatironschool.com/<%= @student.image %>" alt="">
 
- <img src="http://ruby006.students.flatironschool.com/img/students/kana_abe_index_profile.jpg" alt="Kana Abe">
+<br>
+<%= form_tag("/answer", method: "POST", :other_param => "bob") do %>
+<!--   <%#= label_tag([:guess], value="first name:") %> -->
+  <%= text_field_tag [:guess] %>
+  <%= hidden_field_tag [:real_first_name], "#{@student.first_name}" %>
+  <%= hidden_field_tag [:real_full_name], "#{@student.name}" %>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+
+<br>
+<br>
+<p>friends named: <a href="/named"><%= @named %></a>  | friends not named: <a href="/unnamed"><%= @unnamed %></a> </p>
+
+
 </body>
+
+<footer>
+<%= button_to "Reset", "/", :method => "post" %>
+</footer>
+

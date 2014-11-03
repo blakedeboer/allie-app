@@ -41,7 +41,6 @@ class Scraper
 
 end
 
-Scraper.new.create_students
 
 # Student.all.each do |student|
 #   puts "#{student.id}"
