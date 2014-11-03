@@ -1,6 +1,11 @@
 <% if @value %>
   <h1>Hey Allie, you're right!</h1>
 
+  <img width="380" height "380" src="http://ruby006.students.flatironschool.com/<%= @student.image %>" alt="">
+  <br>
+  My full name is <%= @student.name %>. See ya around school!
+  <br>
+  <br>
   <p>
   Click below to guess another student's name.
   </p>
@@ -9,9 +14,12 @@
 
   <h1>Hey Allie, ya missed.</h1>
 
-  <p>
-  You guessed <%= @guess %> but their name was <%= @real_first_name %>.
-  </p>
+  <img width="380" height "380" src="http://ruby006.students.flatironschool.com/<%= @student.image %>" alt="">
+  <br>
+  My name is <%= @student.name %> but you guessed <%= @guess %>.<br> 
+  It's cool. I'll see ya soon.
+  <br>
+  <br>
   <p>
   Click below to guess another student's name. 
   </p>

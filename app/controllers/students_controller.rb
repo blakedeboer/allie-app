@@ -15,10 +15,9 @@ class StudentsController < ApplicationController
   def answer
     @guess = params[:guess]
     @real_first_name = params[:real_first_name]
-    @name = params[:real_full_name]
+    @student = Student.find_by(:name => params[:real_full_name])
     if @guess == @real_first_name
       @value = true
-      @student = Student.find_by(:name => @name)
       @student.named = true
       @student.save
     end
